@@ -2,9 +2,9 @@ FROM python:3.9.0
 
 WORKDIR /home/
 
-RUN git clone https://github.com/yh9419/cv3.git
+RUN git clone https://github.com/sudoyh/Django_Docker_AWS.git
 
-WORKDIR /home/cv3/
+WORKDIR /home/Django_Docker_AWS/
 
 RUN pip install -r requirements.txt
 
