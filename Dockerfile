@@ -10,6 +10,11 @@ RUN pip install -r requirements.txt
 
 RUN echo "SECRET_KEY=django-insecure-(bap-4ft5p(xcuyffc944atg6+cm3k)k$nfttgwh-+84c+6s@a" > .env
 
+RUN find . -name "*.pyc" -delete
+RUn find . -name "__pycache__" -delete
+
+RUN python manage.py makemigrations
+
 RUN python manage.py migrate
 
 EXPOSE 7000
